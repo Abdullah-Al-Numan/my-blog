@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> My Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="blog.html">Blogs</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="myblog.html">Myblogs</a>
+      </li>
+    </ul>
+    <div class="dropdown ">
+        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+          Logout
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <h5 class="dropdown-header">Are you sure leave blog?</h5>
+          <a class="dropdown-item" id="logout" href="#">Yes</a>
+          <a class="dropdown-item" href="#">No</a>
+        </div>
+      </div>
+</nav>
+  <br>
+
+  <div class="container">
+    <button id="hide" type="button" name="button" class="btn btn-primary mt-3 ml-3">Upload blog</button>
+     <div class="container" style="display:none" id="con">
+      <div id="aler" ></div>
+      <form id="studentForm">
+        <div class="form-group">
+          <label for="uname">Blogger name:</label>
+          <input type="text" class="form-control" id="uname" placeholder="Enter Blogger name" name="uname" required>
+        </div>
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" required>
+        </div>
+        <div class="form-group">
+       <label for="comment">Description:</label>
+       <textarea class="form-control" rows="5" id="comment" placeholder="Enter Description" ></textarea>
+        </div>
+        <div class="form-group">
+            <progress value="0" id="uploader" max="100" style="width:100%">0%</progress>
+
+          <input type="file" class="form-control" id="file", onchange="changefile(event)">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    <div id="display"></div>
+
+    </div>
+
+    <script>
+      document.getElementById('hide').addEventListener('click',showform);
+      function showform(e){
+        e.preventDefault();
+      document.getElementById('con').style.display="block";
+
+      }
+    </script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+<script type="text/javascript" src="myblog.js"></script>
+
+</body>
+</html>

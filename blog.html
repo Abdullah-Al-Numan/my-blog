@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " href="#">Blogs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="myblog.html">Myblogs</a>
+      </li>
+    </ul>
+    <div class="dropdown ">
+        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+          Logout
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <h5 class="dropdown-header">Are you sure leave blog?</h5>
+          <a class="dropdown-item" id="logout" href="#">Yes</a>
+          <a class="dropdown-item" href="#">No</a>
+        </div>
+      </div>
+</nav>
+  <br>
+
+  <div class="container">
+    <div id="display"></div>
+
+
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+<script type="text/javascript" src="blog.js"></script>
+
+</body>
+</html>
